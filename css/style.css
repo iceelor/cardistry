@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* http: 
+   v1.0 | 20130126
+   License: none 
+*/
+/* mypage - mp
+------------------------------------------------------------------*/
+.mypage{width:940px;margin:0 auto;padding-top:100px;}
+.mypage-l{float:left;width:360px;}
+.mypage-r{float:right;width:560px;}
+
+.mypage .publishnav{margin-left:10px;}
+.mp-opus{margin-top:20px;}
+.mp-opus li{float:left;width:280px;}
+.mp-opus .opus{margin:0 auto;height:210px;}
+
+/* homelink
+------------------------------------------------------------------*/
+.homelink{display:block;position:fixed;top:0;right:0;z-index:10;
+	width:150px;height:85px;
+	line-height:35px;font-size:18px;color:#f1f1f1;
+	text-indent:100px;letter-spacing:3px;
+	text-shadow:2px 2px 1px rgba(0,0,0,.3);
+	background:url(images/home.png) 0 0 no-repeat;
+}
+.homelink:hover{color:#fff;}
+
+
