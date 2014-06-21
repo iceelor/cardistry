@@ -159,6 +159,30 @@
 
 <br /><br />
 
+<!-- btn -->
+<a href="javascript:void(0)" class="button btn-green">按钮</a>
+<a href="javascript:void(0)" class="button btn-big btn-green">按钮<em>说明文字</em></a>
+<a href="javascript:void(0)" class="button btn-blue">按钮</a>
+<a href="javascript:void(0)" class="button btn-big btn-blue">按钮<em>说明文字</em></a>
+<a href="javascript:void(0)" class="button btn-gray">按钮</a>
+<a href="javascript:void(0)" class="button btn-big btn-gray">按钮<em>说明文字</em></a>
+
+<br /><br /><br />
+
+<!--searchfriends -->
+
+<div class="searchfriends">
+	<div class="shf-normal">
+		<input type="text" class="shf-input" value="好友"/>
+		<a href="javascript:void(0);" class="shf-btn">搜索</a>
+		<a href="" class="shf-more">精确筛选</a>
+		<div class="clear"></div>
+	</div>
+	<div class="shf-exact">
+	</div>
+</div>
+<br /><br />
+
 <!-- friends -->
 <div class="friendslist clearfix">
 	<div class="frl-box">
@@ -181,14 +205,43 @@
 </div>
 
 <br /><br />
-<!-- btn -->
-<a href="javascript:void(0)" class="button btn-green">按钮</a>
-<a href="javascript:void(0)" class="button btn-big btn-green">按钮<em>说明文字</em></a>
-<a href="javascript:void(0)" class="button btn-blue">按钮</a>
-<a href="javascript:void(0)" class="button btn-big btn-blue">按钮<em>说明文字</em></a>
-<a href="javascript:void(0)" class="button btn-gray">按钮</a>
-<a href="javascript:void(0)" class="button btn-big btn-gray">按钮<em>说明文字</em></a>
-<br />
+<!--uiform -->
+<div class="uiform">
+	<p class="ui-line">
+		<span class="icon ui-labelicon">Ü</span>
+		<label for="regemail" class="ui-label">账号（邮箱）</label>
+		<input type="text" id="regemail" class="ui-input" />
+	</p>
+	<p class="ui-line">
+		<span class="icon ui-labelicon">è</span>
+		<label for="regpw" class="ui-label">密码</label>
+		<input type="password" id="regpw" class="ui-input" />
+		<span class="ui-error"><span class="icon">ã</span>错误提示信息</span>
+	</p>
+	<p class="ui-line">
+		<span class="icon ui-labelicon">è</span>
+		<label for="regpwcheck" class="ui-label">确认密码</label>
+		<input type="password" id="regpwcheck" class="ui-input"/>
+	</p>
+	<p class="ui-line">
+		<span class="icon ui-labelicon">e</span>
+		<label for="regnumber" class="ui-label">会员校验码</label>
+		<input type="text" id="regnumber" class="ui-input" />
+		<span class="ui-error"><span class="icon">ã</span>错误提示信息</span>
+	</p>
+</div>
+
+<br /><br />
+<!--pupdiv -->
+<div class="pupdiv">
+	<div class="">
+	</div>
+	<div class="">
+	</div>
+</div>
+<!--pup -->
+
+
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript">
@@ -204,6 +257,30 @@
 	},function(){
 		$(this).removeClass('plt-delete-hover');
 	})
+
+	$('.shf-more').toggle(function(){
+		$('.shf-exact').slideDown();
+		return false;
+	},function(){
+		$('.shf-exact').slideUp();
+		return false;
+	});
+
+
+    var uiInput=$('.ui-input');
+    uiInput.each(function(){
+        if($(this).val()!=""){
+            $(this).prev().hide();
+            $(this).css("background","#ddd");
+        }
+    }).focus(function(){
+        $(this).prev().hide();
+    }).blur(function(){
+        if ($(this).val() == "") {
+            $(this).prev().show();
+            $(this).css("background","none");
+        }else{$(this).css("background","#ddd");}
+    });
 
 
 </script>
