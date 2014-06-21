@@ -221,7 +221,7 @@
 -----------------------------------------------------------*/
 .personalletter{width:560px;}
 
-.plt-box{position:relative;padding-bottom:20px;}
+.plt-box{position:relative;padding-bottom:10px;}
 .plt-box a{display:block;
 	height:75px;padding-top:15px;
 	background:#f1f1f1;
@@ -277,7 +277,7 @@
 -----------------------------------------------------------*/
 .friendslist{width:560px;}
 .frl-box{position: relative;
-	float:left;height:100px;padding:20px 0 0;width:260px;margin:0 20px 20px 0;
+	float:left;height:100px;padding:20px 0 0;width:270px;margin:0 10px 10px 0;
 	background:#f1f1f1;
 	box-shadow:0 2px 3px rgba(0,0,0,.3);}
 .frl-photo{
@@ -383,7 +383,7 @@
 /*searchfriends-shf
 -----------------------------------------------------*/
 .searchfriends{
-	width:540px;	
+	width:550px;margin-bottom:10px;
 }
 .shf-normal{
 	position:relative;
