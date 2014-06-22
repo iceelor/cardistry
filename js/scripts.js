@@ -104,7 +104,7 @@
 						return handle ? rt : undefined;
 					},
 					afterOpen : function(){
-						$(window).trigger('resize');
+						$(window).trigger('ppreset');
 					}
 				});
 
