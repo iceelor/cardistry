@@ -32,14 +32,8 @@ body{
 	color:#333;
 	background:#fff;
     background:url(images/bg.png) 0 0 repeat;}
-@font-face {font-family:
-	'sosa';
-    src:
-    url('font/sosa.eot');
-    src:
-    local('☺'), url('font/sosa.woff') format('woff'), url('font/sosa.ttf') format('truetype'), url('font/sosa.svgwebfontKOf9F4sx') format('svg');
-    font-weight: normal;
-    font-style: normal;}
+
+
 /* base element
 ------------------------------------------------------------*/
 a{
@@ -52,7 +46,6 @@ a{
 a:hover{color:#08c;}
 a{outline:none;}
 p{font-family:"微软雅黑","宋体";font-size:14px;line-height:140%;color:#333;}
-.icon{font-family: 'SOSA';font-weight: normal;font-size:20px;}
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -63,3 +56,4 @@ p{font-family:"微软雅黑","宋体";font-size:14px;line-height:140%;color:#333
 }
 .clear{clear:both;}
 
+.relative{position:relative;}
