@@ -1,5 +1,5 @@
-(function($){
-
+define("common/popup", function(require, exports, module) {
+    var $ = jQuery;
 	$.fn.extend({
 		pop:function(opt){
 			var o = $.extend({
@@ -141,7 +141,5 @@
 			confirm(info,title,'<p class="clearfix"><a href="javascript:void(0);" class="ui-confirm-submit">确 定</a></p>',cbk);
 		}
 	});
-
-	
-
-})(jQuery);
+	return $;
+});
