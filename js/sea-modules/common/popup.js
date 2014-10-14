@@ -1,4 +1,4 @@
-define("common/popup", function(require, exports, module) {
+(function() {
     var $ = jQuery;
 	$.fn.extend({
 		pop:function(opt){
@@ -73,8 +73,8 @@ define("common/popup", function(require, exports, module) {
 	});
 	//上下居中
 	$(window).on('resize popup_reset',function(e){
-		var pop = $('.popup:visible'), panel = pop.find('.popup-inner'), dialog = $('.popup-dialog');
-		if( pop.length && dialog.length ){
+		var pop = $('.popup-alert:visible'), panel = pop.find('.popup-inner');
+		if( pop.length){
 			var mgt = ( $(window).height() - panel.height() ) / 2 - 30;
 			panel.css({
 				marginTop : ( mgt > 0 ? mgt : 0 )
@@ -93,7 +93,7 @@ define("common/popup", function(require, exports, module) {
 		return inputs.join('');
 	};
 	var confirm = function(info,title,confirmLine,cbk){
-		var des; 
+		var des, type; 
 		if( typeof confirmLine === 'function' ){
 			cbk = confirmLine;
 			confirmLine = null;
@@ -109,7 +109,7 @@ define("common/popup", function(require, exports, module) {
 				+'</p>';
 				return formCreat(c);
 			}else{
-
+				type = 'popup-alert';
 				return '<p class="ui-input popup-dialog">'+c+'&nbsp;</p>';
 			}
 		})(info);
@@ -121,6 +121,9 @@ define("common/popup", function(require, exports, module) {
 					+'</form></div>');
 		var	d = panel.pop({
 				close : false,
+				beforeOpen:function(){
+					this.addClass(type);
+				},
 				beforeClose : function(handle){
 					var rt = cbk.call( d, $(handle).hasClass('ui-confirm-submit') );
 					return handle ? rt : undefined;
@@ -141,5 +144,4 @@ define("common/popup", function(require, exports, module) {
 			confirm(info,title,'<p class="clearfix"><a href="javascript:void(0);" class="ui-confirm-submit">确 定</a></p>',cbk);
 		}
 	});
-	return $;
-});
+})();

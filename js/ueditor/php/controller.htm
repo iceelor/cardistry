@@ -27,7 +27,6 @@ return function(){
 	    /* 上传文件 */
 	    case 'uploadfile':
 	    	var f = request.files[0].file;
-	    	console.log( request.files );
         	response.end( '{"original":"'+f.name+'","name":"'+f.name+'","url":"http://staticconf:2850/static/'+f.name+'","size":"'+f.size+'","type":"'+f.type+'","state":"SUCCESS"}' )
         	break;
 	}

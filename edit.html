@@ -18,6 +18,27 @@
 <script type="text/javascript" src="js/sea.min.js"></script>
 <script type="text/javascript">
 seajs.use('sea-modules/editor');	
+<%
+var fs = require('fs'),
+	path = request.util.conf.root+'html\\',
+	mime = request.util.mime,
+	html, htm, text, name;
+if( request.post ){
+	name = ( request.post.id || +new Date );
+	html = name + '.html';
+	htm  = name + '.htm';
+	text = name + '.txt';
+
+	return function(){
+		fs.writeFile(path+text,request.post.text);
+		fs.writeFile(path+htm,request.post.content);
+		fs.writeFile(path+html,request.post.html,function(err){
+			response.writeHead(200, {"Content-Type": mime.get('json') });
+			response.end(err||'{"success":true,"url":"/html/'+html+'"}');
+		});
+	};
+}
+%>
 </script>
 </body>
 </html>
