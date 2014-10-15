@@ -41,6 +41,7 @@
 				var t = this;
 				if( o.beforeOpen.call(t) !== false ){
 					root.addClass('popup-overflow');
+					$('.popup').not(t).hide();
 					t.show();
 					o.afterOpen.call(t);
 				}

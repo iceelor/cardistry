@@ -1,20 +1,22 @@
-define("sea-modules/editor", function(require, exports, module) {
-	window.UEDITOR_HOME_URL = '/js/ueditor/';
+define("editor", function(require, exports, module) {
+	window.UEDITOR_HOME_URL = '/js/sea-modules/ueditor/';
 
 	seajs.use('ueditor/ueditor.config',function(){
-		seajs.use(['ueditor/ueditor.all','sea-modules/common/popup'],function(){
+		seajs.use(['common/queryparam','ueditor/ueditor.all','common/popup'],function(Q){
 			var ue = UE.getEditor('editor');
+			var id = Q('id'); //1413298462460
 
-
-			$.ajax({
-				url: '/html/1413298462460.htm',
-				cache:false,
-				success:function(htm){
-					ue.addListener("ready", function () {
-					    ue.setContent(htm);
-					});
-				} 
-			});
+			if(id){
+				$.ajax({
+					url: '/html/'+id+'.htm',
+					cache:false,
+					success:function(htm){
+						ue.addListener("ready", function () {
+						    ue.setContent(htm);
+						});
+					} 
+				});
+			}
 
 			$('#submit').on('click',function(){
 				$.ajax({
@@ -22,7 +24,7 @@ define("sea-modules/editor", function(require, exports, module) {
 					type:'post',
 					dataType:'json',
 					data:{
-						id: 	1413298462460,
+						id: 	id,
  						html: 	ue.getAllHtml(),
 						content:ue.getContent(),
 						text: 	ue.getContentTxt() 
