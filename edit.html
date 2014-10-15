@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>发布</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/iconfont.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+	<div style="width:800px;margin:40px auto;" class="clearfix">
+		<script id="editor" type="text/plain" style="height:450px;"></script>
+		<a id="submit" href="javascript:void(0);" style="float:right;font:normal 18px/50px 'Microsoft Yahei';color:#fff;">发布</a>
+	</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/sea.min.js"></script>
+<script type="text/javascript">
+seajs.use('sea-modules/editor');	
+<%
+var fs = require('fs'),
+	path = request.util.conf.root+'html\\',
+	mime = request.util.mime,
+	html, htm, text, name;
+if( request.post ){
+	name = ( request.post.id || +new Date );
+	html = name + '.html';
+	htm  = name + '.htm';
+	text = name + '.txt';
+
+	return function(){
+		fs.writeFile(path+text,request.post.text);
+		fs.writeFile(path+htm,request.post.content);
+		fs.writeFile(path+html,request.post.html,function(err){
+			response.writeHead(200, {"Content-Type": mime.get('json') });
+			response.end(err||'{"success":true,"url":"/html/'+html+'"}');
+		});
+	};
+}
+%>
+</script>
+</body>
+</html>

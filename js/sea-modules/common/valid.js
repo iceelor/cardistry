@@ -1,7 +1,7 @@
 /**
 * 通用表单验证组件 of jQuery
 */ 
-define("common/valid", function(require, exports, module) {
+(function() {
     var $ = jQuery;
     /**全角字符转化为半角字符**/
     $.stringCtoh = function(str) {
@@ -232,5 +232,4 @@ define("common/valid", function(require, exports, module) {
         }
     });
     
-    return $.form;
-});
+})();
