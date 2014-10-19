@@ -16,7 +16,7 @@
 			var root = $('html'),
 				holder = $('<div class="popup" style="display:none;"></div>'),
 				close = $('<a href="javascript:void(0);" class="popup-close icon">&#xe61e;</a>'),
-				inner = $('<div class="popup-inner"></div>').css({
+				inner = $('<div class="popup-inner clearfix"></div>').css({
 					width: o.width
 				}),
 				roc = o.removeOnClose;

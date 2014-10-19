@@ -79,7 +79,18 @@ define("menu", function(require, exports, module) {
 				}
 			});
 		});
+	});
 
-		
+	seajs.use(['common/requestAFrame'],function(R){
+		var index = 1, 
+			info = ['<a href="javascript:void(0)"><span class="icon" >&#xe62e;</span>您有3条新消息</a>',
+					'<a href=""><span class="icon">&#xe60e;</span>您有个人信息需要完善！</a>'];
+		R.addTimeout('message',function(){
+			$('#tip')
+				.prepend( $('<div class="tip-line" style="display:none">'+info[++index%2]+'<b class="icon" onclick="$(this).parent().remove();">&#xe61e;</b></div>').fadeIn() )
+				.children(':gt(7)').fadeOut(function(){
+					$(this).remove()
+				});
+		},5000);
 	});
 });
