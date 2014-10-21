@@ -61,16 +61,43 @@ define("square", function(require, exports, module) {
 		'<div class="article"></div>' +
 		'<div class="discuss">' +
 		'	<div class="discuss-form clearfix">' +
-		'		<textarea>新建一个交流</textarea>' +
+		'		<textarea>发表评论</textarea>' +
 		'		<p><a href="">发送</a><span>你还可以输入500字</span></p>' +
 		'	</div>' +
+		'	<a href="" class="discuss-more">显示更早的回复</a>'+
 		'	<div class="discuss-cont">' +
-		'		<div class="discuss-you discuss-you-globle  clearfix">' +
-		'			<a href="" class="discuss-photo "><img src="images/4.jpg" /></a>' +
-		'			<p class="discuss-time">username 16:20</p>' +
-		'			<p class="discuss-message">你好</p>' +
-		'			<p class="discuss-func"><a href=""><span class="icon">&#xe621;</span>回复<span class="discuss-num">(0)</span></a></p>' +
-		'		</div>' +
+		'		<div class="discuss-box clearfix">'+
+		'			<a href="" class="discuss-photo"><img src="images/4.jpg" /></a>'+
+		'			<p class="discuss-message"><a href="">时扬扬</a> : 你好</p>'+
+		'			<p class="discuss-time">16:20 <a href=""><span class="icon">&#xe612;</span>回复</a></p>'+
+		'		</div>'+
+		'		<ul class="discuss-cont-inner" style="display:block;">'+
+		'			<li class="clearfix">'+
+		'				<a href="" class="discuss-photo"><img src="images/4.jpg" /></a>'+
+		'				<p class="discuss-message"><a href="">张博</a> @ <a href="">时扬扬</a> : 你好</p>'+
+		'				<p class="discuss-time">16:20 <a href=""><span class="icon">&#xe612;</span>回复</a></p>'+
+		'			</li>'+
+		'			<li class="clearfix">'+
+		'				<a href="" class="discuss-photo"><img src="images/4.jpg" /></a>'+
+		'				<p class="discuss-message"><a href="">张博</a> @ <a href="">时扬扬</a> : 你好</p>'+
+		'				<p class="discuss-time">16:20 <a href=""><span class="icon">&#xe612;</span>回复</a></p>'+
+		'			</li>'+
+		'		</ul>'+
+		'	</div>' +
+		'	<div class="discuss-cont">' +
+		'		<div class="discuss-box clearfix">'+
+		'			<a href="" class="discuss-photo"><img src="images/4.jpg" /></a>'+
+		'			<p class="discuss-message"><a href="">时扬扬</a> : 你好</p>'+
+		'			<p class="discuss-time">16:20 <a href=""><span class="icon">&#xe612;</span>回复</a></p>'+
+		'		</div>'+
+		'		<ul class="discuss-cont-inner" style="display:block;">'+
+		'			<li class="clearfix">'+
+		'				<div class="discuss-form clearfix">' +
+		'					<textarea>发表评论</textarea>' +
+		'					<p><a href="">发送</a><span>你还可以输入500字</span></p>' +
+		'				</div>' +
+		'			</li>'+
+		'		</ul>'+
 		'	</div>' +
 		'</div>';
 
