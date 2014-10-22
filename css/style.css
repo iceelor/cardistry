@@ -320,38 +320,21 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
     position:relative;
     width:860px;margin:0 auto;
 }
-.album-choose{
-    padding-left:20px;
-    height:40px;margin-bottom:20px;
+.album-h2{padding:0 20px;margin-bottom:30px;}
+.album-h2 strong{
+    float:left;
+    font-size:20px;
     color:#3b393d;
     text-shadow:1px 1px 0px #666;
 }
-
-.album-choose a{float:left;display:block;
-    margin-right:40px;
-    line-height:40px;font-size:14px;
-}
-.album-choose a .icon{margin-right:5px;}
-.album-choose a:hover{color:#fff;text-shadow:0 0 3px #08c;}
-.album-choose a.on{color:#00ce9b;text-shadow:0 0 3px #333;}
-
-.album-search{padding:6px 40px 0 0;float:right;}
-.album-search input{
-    float:left;
-    height:24px;width:200px;padding:0 15px;
-    line-height:24px;font-family:"微软雅黑";font-size:14px;color:#00ce9b;
-    background:#444;
-    background:rgba(0,0,0,.2);
-    border-radius:20px;
-    border:2px solid #3b393d;
-    box-shadow:1px 1px 2px #666;
-    outline:none;
-}
-.album-search input:focus{
-    border-color:#00ce9b;
+.album-h2 strong span{padding:0 10px;font-size:14px;}
+.album-h2 a{
+    float:right;
+    display:block;
+    color:#fff;
 }
 /*album-cont*/
-.album-cont{position:relative;width:100%;}
+.album-cont{position:relative;width:100%;margin-bottom:20px;}
 .album-cont p em{padding:0 5px;color:#08c;font-size:16px;}
 .album-cont ul{padding-left:20px;}
 .album-cont li{float:left;margin:0 20px 20px 0;}
@@ -395,9 +378,6 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
 .album-btn-next:hover{
     border-left:1px dashed #3b393d;
 }
-
-
-
 
 /*publish
 */
@@ -780,33 +760,33 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
 /*download*/
 .ablumdes-download{/*background:#f1f1f1 url(images/bg2.png) 0 0 repeat;*/}
 .ablumdes-download ul{padding:0;}
-.ablumdes-download li{position:relative;padding:13px 0 0 0;background:#333;
+.ablumdes-download li{position:relative;padding:13px 0 0 0;background:#ddd;
     margin-bottom:15px;}
 .ablumdes-download-icon{
     display:block;position:absolute;top:12px;left:10px;
     width:50px;height:50px;text-align:center;
-    font-size:40px;line-height:50px;color:#ddd;
+    font-size:40px;line-height:50px;color:#666;
 }
 .ablumdes-download strong{
     position:absolute;top:10px;right:20px;
-    display:block;height:40px;text-align:center;color:#ddd;
+    display:block;height:40px;text-align:center;color:#666;
     line-height:30px;font-size:16px;
 }
 .ablumdes-download strong em{display:block;font-size:12px;line-height:15px;}
 .ablumdes-download p{
     margin:0 150px 0 66px;height:20px;overflow:hidden;
-    font-size:12px;line-height:20px;color:#ddd;
+    font-size:12px;line-height:20px;color:#666;
 }
 .ablumdes-download p.first{font-size:14px;}
 .ablumdes-download-btn{
     margin:15px 0 0;position:relative;
     display:block;height:40px;
-    line-height:40px;font-size:12px;color:#ddd;text-align:center;
+    line-height:40px;font-size:12px;color:#08c;text-align:center;
     border-top:1px solid #666;
     transition:all ease-out .2s;    
 }
 .ablumdes-download-btn .icon{margin-right:10px;font-size:20px;}
-.ablumdes-download-btn:hover{background:rgba(255,255,255,.1);color:#def;}
+.ablumdes-download-btn:hover{background:rgba(255,255,255,.1);color:#08c;}
 /*info*/
 .ablumdes-info{
     margin-top:20px;padding:0 4px;
