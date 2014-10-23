@@ -320,18 +320,30 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
     position:relative;
     width:860px;margin:0 auto;
 }
-.album-h2{padding:0 20px;margin-bottom:30px;}
+.album-h2{padding:0 20px;margin-bottom:10px;}
 .album-h2 strong{
     float:left;
-    font-size:20px;
+    font-size:20px;line-height:40px;
     color:#3b393d;
     text-shadow:1px 1px 0px #666;
 }
 .album-h2 strong span{padding:0 10px;font-size:14px;}
-.album-h2 a{
-    float:right;
-    display:block;
-    color:#fff;
+.album-jihuo{
+    float:right;margin-right:20px;
+    padding-left:32px;
+    display:block;height:40px;
+    color:#59ffff;line-height:40px;font-size:12px;
+    background:url(images/jihuo.png) 0 0 no-repeat;
+    text-shadow:0px 0px 2px #2fd1f9;
+}
+.album-jihuo:hover{color:#59ffff;}
+.album-already{
+    float:right;margin-right:20px;
+    padding-left:32px;
+    display:block;height:40px;
+    color:#a5f246;line-height:40px;font-size:12px;
+    background:url(images/jihuo.png) 0 -40px no-repeat;
+    text-shadow:0px 0px 2px #93f92f;
 }
 /*album-cont*/
 .album-cont{position:relative;width:100%;margin-bottom:20px;}
@@ -811,3 +823,20 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
         border-radius:3px;
     }
 }*/
+
+
+/*广告*/
+.tccbuy{
+    position:fixed;bottom:20px;left:20px;
+    display:block;
+    width:349px;height:100px;
+    background:url(images/buy.png) 0 0 no-repeat
+}
+.tccbuy-tiny{
+    width:140px;
+    background:url(images/buy.png) 0 -100px no-repeat
+}
+.tccbuy-tiny:hover{
+    width:349px;
+    background:url(images/buy.png) 0 0 no-repeat
+}
