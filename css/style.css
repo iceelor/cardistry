@@ -803,9 +803,6 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
 .ablumdes-info{
     margin-top:20px;padding:0 4px;
     color:#ddd;}
-.ablumdes-info h2{
-    padding-top:5px;
-    line-height:32px;font-size:16px;font-weight:normal;}
 .ablumdes-info p{
     text-indent:2em;line-height:24px;color:#ddd;font-size:12px;}
 
