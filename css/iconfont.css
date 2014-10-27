@@ -40,6 +40,8 @@
 
 .icon-jinggaosanjiaoxing:before { content: "\e62f"; }
 
+.icon-faxianNF:before { content: "\e630"; }
+
 .icon-xihuanSF:before { content: "\e61d"; }
 
 .icon-guanbianniu:before { content: "\e620"; }
@@ -76,15 +78,23 @@
 
 .icon-zixunxinxi:before { content: "\e614"; }
 
+.icon-xiaoxiguanli:before { content: "\e634"; }
+
 .icon-shu:before { content: "\e608"; }
 
 .icon-shezhixiala:before { content: "\e625"; }
 
 .icon-yinle:before { content: "\e60f"; }
 
+.icon-fasongnf:before { content: "\e631"; }
+
 .icon-zhuanjinf:before { content: "\e606"; }
 
 .icon-bbgyouxiang:before { content: "\e62e"; }
+
+.icon-meishi:before { content: "\e632"; }
+
+.icon-nanzhuang:before { content: "\e633"; }
 
 .icon-iconfontlianjie:before { content: "\e610"; }
 

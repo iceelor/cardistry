@@ -68,18 +68,21 @@ define("square", function(require, exports, module) {
 		'	<div class="discuss-cont">' +
 		'		<div class="discuss-box clearfix">'+
 		'			<a href="" class="discuss-photo"><img src="images/4.jpg" /></a>'+
-		'			<p class="discuss-message"><a href="">时扬扬</a> : 你好</p>'+
+		'			<p class="discuss-message"><a href="">时扬扬</a> : </p>'+
+		'			<p class="discuss-message">你好！</p>'+
 		'			<p class="discuss-time">16:20 <a href=""><span class="icon">&#xe612;</span>回复</a></p>'+
 		'		</div>'+
 		'		<ul class="discuss-cont-inner" style="display:block;">'+
 		'			<li class="clearfix">'+
 		'				<a href="" class="discuss-photo"><img src="images/4.jpg" /></a>'+
-		'				<p class="discuss-message"><a href="">张博</a> @ <a href="">时扬扬</a> : 你好</p>'+
+		'				<p class="discuss-message"><a href="">张博</a> @ <a href="">时扬扬</a> : </p>'+
+		'				<p class="discuss-message">你好</p>'+
 		'				<p class="discuss-time">16:20 <a href=""><span class="icon">&#xe612;</span>回复</a></p>'+
 		'			</li>'+
 		'			<li class="clearfix">'+
 		'				<a href="" class="discuss-photo"><img src="images/4.jpg" /></a>'+
-		'				<p class="discuss-message"><a href="">张博</a> @ <a href="">时扬扬</a> : 你好</p>'+
+		'				<p class="discuss-message"><a href="">张博</a> @ <a href="">时扬扬</a> : </p>'+
+		'				<p class="discuss-message">你好</p>'+
 		'				<p class="discuss-time">16:20 <a href=""><span class="icon">&#xe612;</span>回复</a></p>'+
 		'			</li>'+
 		'		</ul>'+
@@ -87,7 +90,8 @@ define("square", function(require, exports, module) {
 		'	<div class="discuss-cont">' +
 		'		<div class="discuss-box clearfix">'+
 		'			<a href="" class="discuss-photo"><img src="images/4.jpg" /></a>'+
-		'			<p class="discuss-message"><a href="">时扬扬</a> : 你好</p>'+
+		'			<p class="discuss-message"><a href="">时扬扬</a> : </p>'+
+		'			<p class="discuss-message"> 你好</p>'+
 		'			<p class="discuss-time">16:20 <a href=""><span class="icon">&#xe612;</span>回复</a></p>'+
 		'		</div>'+
 		'		<ul class="discuss-cont-inner" style="display:block;">'+
