@@ -206,7 +206,7 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
     background:url(images/logo.png) 0 0 no-repeat;
 }
 .h-nav{
-    width:240px;overflow:hidden;
+    width:320px;overflow:hidden;
     margin:0 auto;
 }
 .h-nav li{float:left;}
