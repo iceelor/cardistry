@@ -5,7 +5,7 @@ define("square", function(require, exports, module) {
 
 	var li = '{{#each list}}' +
 			'<li class="type-{{type}} {{option}}-option">' +
-			'	<a href="javascript:void(0)" class="user-photo" data-id="{{authorId}}"><img src="{{authorImg}}" /></a>' +
+			'	<a href="ownspace.html" target="_blank" class="user-photo" data-id="{{authorId}}"><img src="{{authorImg}}" /></a>' +
 			'	<span class="icon tl-article">&#xe60a;</span>' +
 			'	<span class="icon tl-video">&#xe613;</span>' +
 			'	<div class="con">' +
@@ -19,7 +19,7 @@ define("square", function(require, exports, module) {
 			'		<a href="javascript:void(0);" class="icon edit">&#xe61f;</a>' +
 			'		<a href="javascript:void(0);" class="icon delete">&#xe627;</a>' +
 			'		<a href="javascript:void(0);" class="icon heart">&#xe61d;</a>' +
-			'		<a href="javascript:void(0);" class="icon share">&#xe624;</a>' +
+			'		<a href="javascript:void(0);" class="icon share">&#xe636;</a>' +
 			'	</div>' +
 			'</li>{{/each}}',
 	 	li_time = '{{#each group_list}}'+
