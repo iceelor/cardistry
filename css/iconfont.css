@@ -16,6 +16,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-duihua:before { content: "\e637"; }
+
 .icon-renzhengyonghu:before { content: "\e615"; }
 
 .icon-ziliaoku:before { content: "\e609"; }
@@ -111,6 +113,8 @@
 .icon-tubiao:before { content: "\e612"; }
 
 .icon-shanchu:before { content: "\e627"; }
+
+.icon-tousujianguan:before { content: "\e639"; }
 
 .icon-29:before { content: "\e628"; }
 

@@ -5,7 +5,8 @@ define("square", function(require, exports, module) {
 
 	var li = '{{#each list}}' +
 			'<li class="type-{{type}} {{option}}-option">' +
-			'	<a href="ownspace.html" target="_blank" class="user-photo" data-id="{{authorId}}"><img src="{{authorImg}}" /></a>' +
+			'	<a href="ownspace.html" class="user-photo" data-id="{{authorId}}"><img src="{{authorImg}}" /><span class="tl-name"">超级暗夜刺客</span></a>' +
+			// '	<span class="tl-name"">超级暗夜刺客</span>' +
 			'	<span class="icon tl-article">&#xe60a;</span>' +
 			'	<span class="icon tl-video">&#xe613;</span>' +
 			'	<div class="con">' +
