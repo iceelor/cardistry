@@ -189,43 +189,7 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
     background:#97b63c;
     box-shadow:1px 1px 2px rgba(0,0,0,.4) inset,0 2px 2px rgba(0,0,0,.3),2px 0 2px rgba(0,0,0,.3),0 -2px 2px rgba(0,0,0,.2),-2px 0 2px rgba(0,0,0,.2);
 }
-.funcNav-btn{
-    margin-bottom:20px;
-}
-.funcNav-btn a{position:relative;
-    margin-bottom:10px;
-    display:block;
-    /*text-align:center;*/
-    line-height:34px;font-weight:bold;
 
-    background:#f1f1f1;
-    border-radius:5px;
-    box-shadow:0 2px 2px rgba(0,0,0,.3),2px 0 2px rgba(0,0,0,.3),0 -2px 2px rgba(0,0,0,.2),-2px 0 2px rgba(0,0,0,.2);
-}
-.funcNav-btn a .icon{
-    float:left;display:block;padding-left:10px;
-    width:24px;text-align:center;
-    margin-right:5px;
-    font-size:20px;
-}
-.funcNav-btn a:last-child .icon{position:relative;top:1px;left:-3px;font-size:22px;}
-.funcNav-btn a em{
-    position:absolute;top:7px;right:5px;
-    display:block;
-    padding:0 5px;
-    line-height:20px;font-size:12px;font-weight:normal;
-    background:#ccc;
-    border-radius:10px;
-    box-shadow:1px 2px 2px rgba(0,0,0,.3) inset,0px -1px 2px rgba(0,0,0,.3) inset;
-}
-.funcNav-btn a.on{
-    color:#fff;
-    background:#97b63c;
-    box-shadow:1px 1px 2px rgba(0,0,0,.4) inset,0 2px 2px rgba(0,0,0,.3),2px 0 2px rgba(0,0,0,.3),0 -2px 2px rgba(0,0,0,.2),-2px 0 2px rgba(0,0,0,.2);
-}
-.funcNav-btn a.on em{
-    background:#f60;
-}
 /*
 -------------------------------------------------------*/
 .header{
@@ -864,15 +828,14 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
 .player .user-photo:hover{
     background:#69c;transition:all ease-out .3s;
 }
-.player-chat,.player-set{
+.player-set{
     position:absolute;top:20px;right:10px;
     display:block;width:30px;height:30px;text-indent:1px;
     line-height:30px;text-align:center;color:#555;font-size:25px;
     border-radius:5px;
     transition:all ease-out .2s;
 }
-.player-chat{right:43px;font-size:20px;}
-.player-chat:hover,.player-set:hover{background:#666;background:rgba(0,0,0,.5);color:#fff;}
+.player-set:hover{background:#666;background:rgba(0,0,0,.5);color:#fff;}
  /*userinfo */
 .player-card{
     float:left;
@@ -1002,6 +965,7 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
 -----------------------------------------------------------*/
 .ownspace{
     width:800px;margin:0 auto;
+    background:url(images/bg.png) 0 0 repeat;
 }
 .ownspace .personalcard{float:left;}
 .ownspace .timeline{float:right;}
@@ -1169,5 +1133,17 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
 }
 
 
-/*userspace
+/*personalheader
 ------------------------------------------------------*/
+.personalheader{
+    height:455px;overflow:hidden;
+    background:#f1f1f1 url(images/bg2.png) 0 0 no-repeat;
+    box-shadow:0 2px 3px rgba(0,0,0,.4);
+    background:url(images/ownheader-wrapper.png) 0 0 repeat-x;
+}
+.phd-inner{
+    width:1600px;margin:0 auto;
+    height:455px;
+    background:url(images/ownheader.png) 0 0 no-repeat;
+}
+.phd-inner img{float:right;margin-right:235px;display:block;}
