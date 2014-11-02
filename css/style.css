@@ -1136,14 +1136,58 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
 /*personalheader
 ------------------------------------------------------*/
 .personalheader{
-    height:455px;overflow:hidden;
-    background:#f1f1f1 url(images/bg2.png) 0 0 no-repeat;
+    height:400px;
     box-shadow:0 2px 3px rgba(0,0,0,.4);
-    background:url(images/ownheader-wrapper.png) 0 0 repeat-x;
 }
-.phd-inner{
-    width:1600px;margin:0 auto;
-    height:455px;
-    background:url(images/ownheader.png) 0 0 no-repeat;
+.phd-inner{height:400px;margin:0 auto;
 }
-.phd-inner img{float:right;margin-right:235px;display:block;}
+
+
+.phd-style-01{
+    background:#fff url(images/style01.png) right 0 no-repeat;
+}
+.phd-style-01 .phd-inner{
+
+}
+.phd-style-01 strong{
+    display:block;margin:0 auto;
+    text-align:center;
+    font-size:48px;line-height:400px;
+}
+.phd-style-01 strong span{padding:0 20px;font-size:18px;color:#666;}
+
+
+.phd-style-02{
+    background:#fff url(images/style02-bg.png) 0 0 repeat-x;
+}
+.phd-style-02 .phd-inner{
+    position:relative;
+    width:640px;
+    background:url(images/style02.png) center no-repeat;
+}
+.phd-style-02 strong{
+    display:block;padding-top:235px;
+    font-size:32px;line-height:42px;color:#fff;
+}
+.phd-style-02 strong span{padding:0 20px;font-size:18px;color:#ddd;}
+.phd-style-02 b{
+    position:absolute;bottom:-19px;left:50%;margin-left:-25px;
+    width:50px;height:20px;display:block;
+    background:url(images/style-arrow.png) 0 0 no-repeat;
+}
+
+.phd-style-03{
+    background:#fff url(images/style03-bg.png) 0 0 repeat-x;
+}
+.phd-style-03 .phd-inner{
+    margin:0;
+    background:url(images/style03.png) 0 0 no-repeat;
+}
+.phd-style-03 strong{
+    display:block;margin:0 auto;
+    text-align:center;
+    font-size:48px;line-height:400px;
+}
+.phd-style-03 strong span{padding:0 20px;font-size:18px;color:#666;}
+
+
