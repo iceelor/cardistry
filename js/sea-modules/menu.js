@@ -49,10 +49,10 @@ define("menu", function(require, exports, module) {
 			$.confirm({
 				items:[
 					{name:"email", 	icon:"&#xe62e;",label:"账号"},
-					{name:"user",	icon:"&#xe603;",label:"用户名"},
-					{name:"pswd",	icon:"&#xe62c;",label:"密码",type:'password'},
-					{name:"pswd1",	icon:"&#xe62c;",label:"确认密码",type:'password'},
-					{name:"code",	icon:"&#xe62c;",label:"内测邀请码"}
+					{name:"username",	icon:"&#xe603;",label:"用户名"},
+					{name:"userpass",	icon:"&#xe62c;",label:"密码",type:'password'},
+					{name:"userpass1",	icon:"&#xe62c;",label:"确认密码",type:'password'},
+					{name:"yzm",	icon:"&#xe62c;",label:"内测邀请码"}
 				],
 				des:'请填写必要信息：',
 				help:'<a href="#" target="_blank">如何获取内测邀请码</a>',
@@ -63,19 +63,31 @@ define("menu", function(require, exports, module) {
 						alert('两次密码不一致');
 						return false;
 					}
-					return !!$(this).formValid(!1,{
+					if( !!$(this).formValid(!1,{
 						interrupt:true,
 						get:function(name){return this[name]},
 						email:{required:true,regexp:_email ,errorTip:'不是合法的email格式'},
-						user: {required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',maxlen:20},
-						pswd: {required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',minlen:6,maxlen:20},
-						pswd1:{required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',minlen:6,maxlen:20},
-						code: {required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',len:16}
+						username: {required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',maxlen:20},
+						userpass: {required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',minlen:6,maxlen:20},
+						userpass1:{required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',minlen:6,maxlen:20},
+						yzm: {required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',len:16}
 					},{
 						validTip:function(inp,err){
 							if(err){alert(inp[0].placeholder+err)}
 						}
-					});
+					}) ){
+						$.ajax({
+							url: '/register.do',
+							type: 'post',
+							dataType:'json',
+							data: $(this).find('form').serialize(),
+							success:function(res){
+								console.log(res);
+							}
+						});
+					}else{
+						return false;
+					}
 				}
 			});
 		});
