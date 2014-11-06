@@ -88,7 +88,13 @@
 			inputs = [];
 
 		for (var i = 0; i < t.length; i++) {
-			inputs.push( '<p class="ui-input"><span class="icon">'+t[i].icon+'</span><input type="'+(t[i].type||'text')+'" placeholder="'+t[i].label+'" name="'+t[i].name+'"/></p>' );
+			switch(t[i].type){
+				case 'code':
+					inputs.push( '<p class="ui-input code-input"><span class="icon">'+t[i].icon+'</span><input type="text" placeholder="'+t[i].label+'" name="'+t[i].name+'"/><img src="'+t[i].src+'" alt="验证码" onclick="this.src = this.src.replace(/\\?_=\\d+/,\'\') + \'?_=\' + (+new Date) "/></p>' );
+					break;
+				default: 
+					inputs.push( '<p class="ui-input"><span class="icon">'+t[i].icon+'</span><input type="'+(t[i].type||'text')+'" placeholder="'+t[i].label+'" name="'+t[i].name+'"/></p>' );
+			}
 		};
 
 		return inputs.join('');

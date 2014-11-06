@@ -125,6 +125,8 @@ body{background:#333 url(images/bg.png) 0 0 repeat fixed;}
 .ui-input input:focus{
     border: 1px solid red;
 }
+.code-input input{width: 160px;}
+.code-input img{ height: 36px; float: right;}
 /**/
 .ui-confirm-forget{color:#999;font-size:14px;line-height:32px;}
 .ui-confirm-forget .icon{padding-right:2px;}

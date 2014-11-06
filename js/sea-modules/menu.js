@@ -45,6 +45,7 @@ define("menu", function(require, exports, module) {
 			});
 		});
 
+
 		$('#register').on('click',function(){
 			$.confirm({
 				items:[
@@ -52,7 +53,8 @@ define("menu", function(require, exports, module) {
 					{name:"username",	icon:"&#xe603;",label:"用户名"},
 					{name:"userpass",	icon:"&#xe62c;",label:"密码",type:'password'},
 					{name:"userpass1",	icon:"&#xe62c;",label:"确认密码",type:'password'},
-					{name:"yzm",	icon:"&#xe62c;",label:"内测邀请码"}
+					{name:"phone",	icon:"&#xe639;",label:"联系电话"},
+					{name:"yzm",	icon:"&#xe62c;",label:"验证码", type:'code', src:'/image.do?type=reg'}
 				],
 				des:'请填写必要信息：',
 				help:'<a href="#" target="_blank">如何获取内测邀请码</a>',
@@ -70,7 +72,8 @@ define("menu", function(require, exports, module) {
 						username: {required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',maxlen:20},
 						userpass: {required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',minlen:6,maxlen:20},
 						userpass1:{required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',minlen:6,maxlen:20},
-						yzm: {required:true,regexp:/^\w+$/,errorTip:'只能使用字母数字及下划线',len:16}
+						phone: {type:'mobile',errorTip:'请输入正确的手机号'},
+						yzm: {required:true,regexp:/^\w+$/}
 					},{
 						validTip:function(inp,err){
 							if(err){alert(inp[0].placeholder+err)}
