@@ -26,10 +26,10 @@ define("menu", function(require, exports, module) {
 					{name:"email", 	icon:"&#xe62e;",label:"账号"},
 					{name:"pswd",	icon:"&#xe62c;",label:"密码",type:'password'}
 				],
-				des:'请使用nowayker账号登陆：<a href="javascript:void(0);" onclick="$(\'#register\').trigger(\'click\');"><span class="icon">&#xe61c;</span>注册</a>',
+				des:'请使用cardistry.cn账号登录：<a href="javascript:void(0);" onclick="$(\'#register\').trigger(\'click\');"><span class="icon">&#xe61c;</span>注册</a>',
 				help:'<a href="#" target="_blank">忘记密码?</a>',
 				button:'登录'
-			},'<span>Cardistry</span>.cn',function(r){
+			},'登录',function(r){
 				if( r ){
 					return !!$(this).formValid(!1,{
 						interrupt:true,
